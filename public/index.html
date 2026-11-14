@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>B.Sc. Web Engineering - Study Programme Portal</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>B.Sc. in Modern Web Engineering</h1>
+      <p class="subtitle">
+        Welcome to the official information server for our Modern Web Engineering study programme. 
+        Students learn full-stack JavaScript architecture, client-side state management, and HTTP server engineering from the ground up.
+      </p>
+    </header>
+
+    <section class="tester-section">
+      <h2>Interactive API Explorer</h2>
+      <p>Click any endpoint below to test live server responses:</p>
+
+      <div class="button-grid">
+        <button data-method="GET" data-url="/api/courses">GET /api/courses</button>
+        <button data-method="GET" data-url="/api/status">GET /api/status</button>
+        <button data-method="GET" data-url="/api/headers">GET /api/headers</button>
+        <button data-method="POST" data-url="/api/subscribe" class="btn-post">POST /api/subscribe</button>
+        <button data-method="GET" data-url="/api/admin" class="btn-warn">GET /api/admin (403)</button>
+        <button data-method="GET" data-url="/api/stats">GET /api/stats</button>
+        <button data-method="GET" data-url="/api/non-existent" class="btn-error">GET /api/non-existent (404)</button>
+      </div>
+
+      <div class="output-box">
+        <div class="status-bar">
+          <span>HTTP Status:</span>
+          <strong id="statusCode">Waiting for request...</strong>
+        </div>
+        <pre id="responseBody">Click a button above to inspect the server response.</pre>
+      </div>
+    </section>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
